@@ -11,7 +11,7 @@ wifi_path = pathlib.Path(__file__).parent.absolute()
 sys.path.insert(0, wifi_path)
 import wificontrol_
 
-server = Blueprint('ws', __name__, url_prefix=r'/wifi')
+server = Blueprint('ws', __name__, url_prefix=r'/ws/wifi')
 
 rate_wifi = get_param()
 wifi_control = wificontrol_.WiFiControl()
