@@ -6,9 +6,7 @@ import json
 import sys
 import pathlib
 
-wifi_path = pathlib.Path(__file__).parent.absolute()
-sys.path.insert(0, wifi_path)
-import wificontrol_
+from wificontrol_pkg import wificontrol_
 
 module = Blueprint('html', __name__, url_prefix=r'/wifi')
 

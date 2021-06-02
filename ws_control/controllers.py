@@ -7,9 +7,7 @@ import pathlib
 import sys
 
 from ws_control.until import get_param
-wifi_path = pathlib.Path(__file__).parent.absolute()
-sys.path.insert(0, wifi_path)
-import wificontrol_
+from wificontrol_pkg import wificontrol_
 
 server = Blueprint('ws', __name__, url_prefix=r'/ws/wifi')
 

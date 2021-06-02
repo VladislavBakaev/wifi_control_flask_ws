@@ -13,9 +13,9 @@ geventOpt = {'GATEWAY_INTERFACE': 'CGI/1.1',
                 'wsgi.multiprocess': True,
                 'wsgi.run_once': False}
 
-def create_app():
+def create_app(port):
     sockets = Sockets(server)
-    ws_server = WSGIServer(('',5000), server, handler_class=WebSocketHandler, environ=geventOpt)
+    ws_server = WSGIServer(('',port), server, handler_class=WebSocketHandler, environ=geventOpt)
     from ws_control.controllers import server as server_ws
     sockets.register_blueprint(server_ws)
 
