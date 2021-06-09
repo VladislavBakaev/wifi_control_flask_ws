@@ -1,5 +1,5 @@
 import argparse
-from ws_control import create_app
+from wifi_ws_control import create_app
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

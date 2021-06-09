@@ -6,7 +6,7 @@ import json
 import pathlib
 import sys
 
-from ws_control.until import get_param
+from wifi_ws_control.until import get_param
 from wificontrol_pkg import wificontrol_
 
 server = Blueprint('ws', __name__, url_prefix=r'/ws/wifi')

@@ -16,7 +16,7 @@ geventOpt = {'GATEWAY_INTERFACE': 'CGI/1.1',
 def create_app(port):
     sockets = Sockets(server)
     ws_server = WSGIServer(('',port), server, handler_class=WebSocketHandler, environ=geventOpt)
-    from ws_control.controllers import server as server_ws
+    from wifi_ws_control.controllers import server as server_ws
     sockets.register_blueprint(server_ws)
 
     return ws_server

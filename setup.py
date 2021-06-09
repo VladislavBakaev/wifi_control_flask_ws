@@ -11,8 +11,9 @@ setup(
     name="wifi_control_flask_ws",
     version="1.0.0",
     description="Web server for wifi corol",
-    py_modules=["ws_app", "http_app"],
-    packages=["ws_control", "http_control", "wificontrol_pkg"],
-    package_data={"ws_control": ["rate_config_ws.json"]},
-    install_requires=reqs
+    py_modules=["wifi_control_ws_app", "wifi_control_http_app"],
+    packages=["wifi_ws_control", "wifi_http_control", "wificontrol_pkg"],
+    package_data={"wifi_ws_control": ["rate_config_ws.json"]},
+    install_requires=reqs,
+    scripts=['wifi_control_ws_app.py', 'wifi_control_http_app.py']
 )
